@@ -54,7 +54,7 @@ jobs:
 
       - name: Test
         run: |
-          docker run --rm -it app:latest ansible --version
+          docker run --rm app:latest ansible --version
 
       - name: Login to GitHub Container Registry
         if: github.event_name == 'release'
