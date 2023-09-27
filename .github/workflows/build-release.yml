@@ -16,6 +16,12 @@ jobs:
           - python:3.10-slim
 
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -74,7 +80,7 @@ jobs:
           echo "::set-output name=ansible-core-version::$TAG_NAME"
 
       - name: Build and Push
-        if: github.event_name == 'release'
+        if: github.event_name == 'release' && !github.event.act
         uses: docker/build-push-action@v4
         with:
           context: .
