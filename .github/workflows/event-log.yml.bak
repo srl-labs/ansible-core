@@ -3,9 +3,9 @@
   release:
     types:
       - "created"
-      - "published"
   push:
 
+# enable this workflow to dump the full event json to the log
 jobs:
   printJob:
     name: Print event
