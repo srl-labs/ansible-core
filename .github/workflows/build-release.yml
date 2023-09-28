@@ -58,6 +58,7 @@ jobs:
             ghcr.io/${{ github.repository }}/${{ matrix.ansible-core-version }}
           tags: |
             type=raw,value=${{ steps.base-image.outputs.py-version }}
+            type=raw,value=${{ matrix.additional-tags }}
             # git short commit
             type=sha
 
