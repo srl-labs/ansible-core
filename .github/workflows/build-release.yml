@@ -4,6 +4,7 @@ name: Container build
     types:
       - published
   pull_request:
+  workflow_dispatch:
 
 jobs:
   prepare-matrix:
@@ -54,10 +55,10 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/${{ github.repository }}/${{ steps.base-image.outputs.py-version }}
+            ghcr.io/${{ github.repository }}/${{ matrix.ansible-core-version }}
           tags: |
-            type=schedule
-            type=raw,value=${{ matrix.ansible-core-version }}
+            type=raw,value=${{ steps.base-image.outputs.py-version }}
+            type=raw,value=${{ matrix.additional-tags }}
             # git short commit
             type=sha
 

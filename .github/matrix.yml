@@ -14,6 +14,7 @@ include:
   - base-image: "python:3.10-slim"
     ansible-core-version: "2.11.11"
     runs-on: "ubuntu-22.04"
+    addional-tags: "latest"
 
   # 2.12.10
   - base-image: "pypy:3.10-slim"
@@ -23,6 +24,7 @@ include:
   - base-image: "python:3.10-slim"
     ansible-core-version: "2.12.10"
     runs-on: "ubuntu-22.04"
+    addional-tags: "latest"
 
   # 2.13.12
   - base-image: "pypy:3.10-slim"
@@ -32,6 +34,7 @@ include:
   - base-image: "python:3.10-slim"
     ansible-core-version: "2.13.12"
     runs-on: "ubuntu-22.04"
+    addional-tags: "latest"
 
   # 2.14.10
   - base-image: "pypy:3.10-slim"
@@ -41,6 +44,7 @@ include:
   - base-image: "python:3.11-slim"
     ansible-core-version: "2.14.10"
     runs-on: "ubuntu-22.04"
+    addional-tags: "latest"
 
   # 2.15.4
   - base-image: "pypy:3.10-slim"
@@ -50,3 +54,4 @@ include:
   - base-image: "python:3.11-slim"
     ansible-core-version: "2.15.4"
     runs-on: "ubuntu-22.04"
+    addional-tags: "latest"
