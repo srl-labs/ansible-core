@@ -41,3 +41,12 @@ include:
   - base-image: "python:3.11-slim"
     ansible-core-version: "2.14.10"
     runs-on: "ubuntu-22.04"
+
+  # 2.15.4
+  - base-image: "pypy:3.10-slim"
+    ansible-core-version: "2.15.4"
+    runs-on: "ubuntu-22.04"
+
+  - base-image: "python:3.11-slim"
+    ansible-core-version: "2.15.4"
+    runs-on: "ubuntu-22.04"
