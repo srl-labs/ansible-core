@@ -67,7 +67,7 @@ function build {
 
 # testing release-triggered workflow
 function test-act-release {
-  gh act release -W '.github/workflows/build-release.yml' -e .github/workflows/release-event.json -s GITHUB_TOKEN="$(gh auth token)" --matrix py-base-image:pypy:3.10-slim
+  gh act release -W '.github/workflows/build-release.yml' -e .github/workflows/release-event.json -s GITHUB_TOKEN="$(gh auth token)" --matrix base-image:python:3.10-slim
 }
 
 # -----------------------------------------------------------------------------
