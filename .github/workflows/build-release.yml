@@ -8,7 +8,7 @@ name: Container build
 
 jobs:
   prepare-matrix:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     outputs:
       matrix: ${{ steps.matrix.outputs.output }}
     steps:
@@ -18,12 +18,14 @@ jobs:
         run: |
           echo "$GITHUB_CONTEXT"
       - uses: actions/checkout@v4
-      - uses: fabasoad/data-format-converter-action@main
-        id: matrix
+      - uses: fabasoad/data-format-converter-action@v1
+        id: converter
         with:
-          input: ".github/matrix.yml"
+          source-pattern: ".github/matrix.yml"
           from: "yaml"
           to: "json"
+      - id: set-matrix
+        run: echo "matrix=$(jq -c . < ${{ steps.converter.outputs.result-path }}/matrix.json )" >> $GITHUB_OUTPUT
 
   build:
     name: Build container
