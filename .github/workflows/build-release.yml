@@ -9,8 +9,6 @@ name: Container build
 jobs:
   prepare-matrix:
     runs-on: ubuntu-24.04
-    outputs:
-      matrix: ${{ steps.matrix.outputs.output }}
     steps:
       - name: Dump GitHub context
         env:
