@@ -7,97 +7,107 @@
 # python version are taken from ansible's support matrix - https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#support-life
 include:
   # 2.11.11
-  - base-image: "pypy:3.10-slim"
+  - base-image: "pypy:3.11-slim"
     ansible-core-version: "2.11.11"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.10-slim"
     ansible-core-version: "2.11.11"
-    runs-on: "ubuntu-22.04"
-    addional-tags: "latest"
+    runs-on: "ubuntu-24.04"
+    additional-tags: "latest"
 
   # 2.12.10
-  - base-image: "pypy:3.10-slim"
+  - base-image: "pypy:3.11-slim"
     ansible-core-version: "2.12.10"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.10-slim"
     ansible-core-version: "2.12.10"
-    runs-on: "ubuntu-22.04"
-    addional-tags: "latest"
+    runs-on: "ubuntu-24.04"
+    additional-tags: "latest"
 
   # 2.13.13
-  - base-image: "pypy:3.10-slim"
+  - base-image: "pypy:3.11-slim"
     ansible-core-version: "2.13.13"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.10-slim"
     ansible-core-version: "2.13.13"
-    runs-on: "ubuntu-22.04"
-    addional-tags: "latest"
+    runs-on: "ubuntu-24.04"
+    additional-tags: "latest"
 
   # 2.14.17
-  - base-image: "pypy:3.10-slim"
+  - base-image: "pypy:3.11-slim"
     ansible-core-version: "2.14.17"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.11-slim"
     ansible-core-version: "2.14.17"
-    runs-on: "ubuntu-22.04"
-    addional-tags: "latest"
+    runs-on: "ubuntu-24.04"
+    additional-tags: "latest"
 
   # 2.15.5
-  - base-image: "pypy:3.10-slim"
+  - base-image: "pypy:3.11-slim"
     ansible-core-version: "2.15.5"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.11-slim"
     ansible-core-version: "2.15.5"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.12-slim"
     ansible-core-version: "2.15.5"
-    runs-on: "ubuntu-22.04"
-    addional-tags: "latest"
+    runs-on: "ubuntu-24.04"
+    additional-tags: "latest"
 
   # 2.15.12
-  - base-image: "pypy:3.10-slim"
+  - base-image: "pypy:3.11-slim"
     ansible-core-version: "2.15.12"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.11-slim"
     ansible-core-version: "2.15.12"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.12-slim"
     ansible-core-version: "2.15.12"
-    runs-on: "ubuntu-22.04"
-    addional-tags: "latest"
+    runs-on: "ubuntu-24.04"
+    additional-tags: "latest"
 
   # 2.16.8
-  - base-image: "pypy:3.10-slim"
+  - base-image: "pypy:3.11-slim"
     ansible-core-version: "2.16.8"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.11-slim"
     ansible-core-version: "2.16.8"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.12-slim"
     ansible-core-version: "2.16.8"
-    runs-on: "ubuntu-22.04"
-    addional-tags: "latest"
+    runs-on: "ubuntu-24.04"
+    additional-tags: "latest"
 
     # 2.17.1
-  - base-image: "pypy:3.10-slim"
+  - base-image: "pypy:3.11-slim"
     ansible-core-version: "2.17.1"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.11-slim"
     ansible-core-version: "2.17.1"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
 
   - base-image: "python:3.12-slim"
     ansible-core-version: "2.17.1"
-    runs-on: "ubuntu-22.04"
-    addional-tags: "latest"
+    runs-on: "ubuntu-24.04"
+
+    # 2.18.12
+  - base-image: "python:3.12-slim"
+    ansible-core-version: "2.18.12"
+    runs-on: "ubuntu-24.04"
+
+    # 2.19.5
+  - base-image: "python:3.13-slim"
+    ansible-core-version: "2.19.5"
+    runs-on: "ubuntu-24.04"
+    additional-tags: "latest"
